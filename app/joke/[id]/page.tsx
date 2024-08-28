@@ -1,11 +1,12 @@
-import { jokes } from "@/app/data";
+import { db } from "@/prisma/db";
 
 interface Props{
     params: {id: string}
 }
 
-export default function JokePge(props: Props){
-    const joke = jokes.find((joke) => joke.id.toString() === props.params.id)
+export default async function JokePge(props: Props){
+    // const joke = jokes.find((joke) => joke.id.toString() === props.params.id)
+    const joke = await db.joke.findUnique({where: {"id": Number(props.params.id)}});
 
     if(!joke){
         return (<div>Joke not found</div>);

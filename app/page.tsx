@@ -1,8 +1,11 @@
+import { db } from "@/prisma/db";
 import Link from "next/link";
-import { jokes } from "./data";
+import { Joke } from "./data";
 
+export default async function Home() {
 
-export default function Home() {
+  const jokes = await db.joke.findMany({/*filtering kan nskrivas här*/});
+
     return (
     <main className="min-h-screen p-4">
       <ul className="flex flex-col gap-4">
