@@ -1,12 +1,12 @@
 
-export declare interface Joke{
+export interface Joke{
     id: number;
     text: string;
     rating: number;
 }
 
 
-export const jokes: Joke[] = [
+export  const jokes: Joke[] = [
       {
         id: 1,
         text: "Why don't scientists trust atoms? Because they make up everything!",
