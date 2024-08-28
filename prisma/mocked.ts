@@ -1,10 +1,12 @@
-export interface Joke{
-    id: number;
-    text: string;
-    rating: number;
-}
+import { Joke } from "@prisma/client";
+// export interface Joke{
+//     id: number;
+//     text: string;
+//     rating: number;
+// }
 
-// Here I have some mocked data that was used before I set up my Prisma database.
+
+// Here I have some mocked data that is used to seed database.
 export  const jokes: Joke[] = [
       {
         id: 1,
