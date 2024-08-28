@@ -17,19 +17,39 @@ ________________________________________________________________________________
 All commads that has been used in this project:
 
 To create a new Next.js project:
-{
+(
     npx create-next-app@latest
     npm run dev
-}
+)
     
 to install Prisma database:
-{
+(
     npm install prisma --save-dev
     npx prisma init --datasource-provider sqlite
     npx prisma db push
-}
+)
 
 To open database tables:
-{
+(
     npx prisma studio
-}
+)
+
+
+To seed the database :
+(
+    npm install tsx -D
+    npm i tsx -D
+
+
+    And add the following to the package.json file:
+
+     "prisma": {
+        "seed": "tsx prisma/seed.ts"
+    }
+)
+
+
+Because seed the database:
+(
+     npm run seed
+)

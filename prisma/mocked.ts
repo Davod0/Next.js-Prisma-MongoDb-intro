@@ -1,11 +1,10 @@
-
 export interface Joke{
     id: number;
     text: string;
     rating: number;
 }
 
-
+// Here I have some mocked data that was used before I set up my Prisma database.
 export  const jokes: Joke[] = [
       {
         id: 1,
