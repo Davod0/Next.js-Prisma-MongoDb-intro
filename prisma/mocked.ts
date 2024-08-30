@@ -6,7 +6,7 @@ import { Joke } from "@prisma/client";
 // }
 
 
-// Here I have some mocked data that is used to seed database.
+// Here I have some mocked data that is used to seed the database.
 export  const jokes: Joke[] = [
       {
         id: 1,

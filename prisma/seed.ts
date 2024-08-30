@@ -5,7 +5,7 @@ async function main() {
 
     for (const joke of jokes) {
         await db.joke.upsert(
-            {where: {id: joke.id}, 
+            {where: {id: joke.id},  
             update:{}, 
             create:joke}
         );

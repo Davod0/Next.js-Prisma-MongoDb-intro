@@ -26,13 +26,18 @@ to install Prisma database:
 (
     npm install prisma --save-dev
     npx prisma init --datasource-provider sqlite
-    npx prisma db push
 )
+
+To create a new database table or when the data(model) that is being stored in the database changes:
+{
+    npx prisma db push
+}
 
 To open database tables:
 (
     npx prisma studio
 )
+
 
 
 To seed the database :
@@ -53,3 +58,5 @@ Because seed the database:
 (
      npm run seed
 )
+
+
