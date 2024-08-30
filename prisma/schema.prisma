@@ -6,12 +6,24 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "mongodb"
   url      = env("DATABASE_URL")
 }
 
 model Joke {
-  id     Int    @id @default(autoincrement())
+  id     String @id @default(auto()) @map("_id") @db.ObjectId
   text   String
   rating Float?
+
+  reviews Review[]
+}
+
+model Review {
+  id     String @id @default(auto()) @map("_id") @db.ObjectId
+  text   String
+  rating Int
+  author String
+  jokeId String @db.ObjectId
+
+  joke Joke @relation(fields: [jokeId], references: [id])
 }
