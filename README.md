@@ -1,7 +1,7 @@
 Welcome to my Next.js project, designed to showcase the integration of TypeScript and Tailwind CSS for styling purposes. This project serves as a learning platform for mastering Next.js development practices.
 
-Objective
-The primary goal of this project is to enhance my proficiency in Next.js by building a functional web application. Through this endeavor, I aim to solidify my understanding of modern web development techniques and best practices.
+In this project i am using mongodb as databse and the address of the database is being stored in the .env file, but .env file in not
+available in the repository on Github.
 
 Technologies Used
 Next.js: A React framework that enables functionality such as server-side rendering and generating static websites for React-based web applications.
